@@ -27,6 +27,9 @@ const todo2 = new Todo({
 const todo3 = new Todo({
   todo:"<-- Check this box to delete a todo!!",
 });
+const todo4 = new Todo({
+  todo:"To create your custom Todo just add "/name-of-todolist" in the url!!",
+});
 const options = {
   weekday: "long",
   day: "numeric",
@@ -39,7 +42,7 @@ app.get("/", function (req, res) {
       console.log(err);
     }else{
       if(todos.length==0){
-        Todo.insertMany([todo1,todo2,todo3],function(err){
+        Todo.insertMany([todo1,todo2,todo3,todo4],function(err){
           if(err){
             console.log(err);
           }
@@ -105,7 +108,7 @@ List.findOne({name:_.capitalize(req.params.type)},function(err,list){
     if(!list){
       const list = new List({
         name:_.capitalize(req.params.type),
-        items:[todo1,todo2,todo3],
+        items:[todo1,todo2,todo3,todo4],
       });
       list.save();
       res.redirect("/"+_.capitalize(req.params.type));
