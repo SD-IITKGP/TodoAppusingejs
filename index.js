@@ -19,7 +19,7 @@ const listSchema = new mongoose.Schema({
 const Todo = mongoose.model("Todo",todolistSchema);
 const List = mongoose.model("List",listSchema);
 const todo1 = new Todo({
-  todo:"Welcom to your Todo List!!",
+  todo:"Welcome to your Todo List!!",
 });
 const todo2 = new Todo({
   todo:"Write your Todo upside and press the + button to add!!",
