@@ -12,22 +12,28 @@ body {
   background-color: white;
   margin: 3%;
   border-radius: 20%;
-  box-shadow: 0px 2px 5px;
+  box-shadow: 0 2px 5px;
 }
 .inputarea {
   margin: 3%;
 }
 .submit {
-  margin: 2% 0% 0% 0%;
-  boder-radius: 50%;
+  margin: 2% 0 0 0;
+  border-radius: 50%;
 }
 .list-group-item {
-  margin: 2% !important;
+  margin: 0.5% !important;
 }
 footer {
-  position: absolute;
+  /* position: absolute; */
   bottom: 0;
 }
 a {
   color: red !important;
+}
+#checkbox{
+  display: inline-block !important;
+}
+#todo{
+  display: inline-block !important;
 }
