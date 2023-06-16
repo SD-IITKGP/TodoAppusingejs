@@ -8,7 +8,7 @@ const app = express();
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
-mongoose.connect("mongodb+srv://sourabhchoudhary:<password>@cluster0.hch1sgl.mongodb.net/todoList",{useNewUrlParser:true});
+mongoose.connect("mongodb+srv://sourabhchoudhary:"+process.env.PASS+"@cluster0.hch1sgl.mongodb.net/todoList",{useNewUrlParser:true});
 const todolistSchema = new mongoose.Schema({
   todo:String,
 });
